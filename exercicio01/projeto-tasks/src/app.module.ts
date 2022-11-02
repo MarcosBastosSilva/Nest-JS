@@ -5,10 +5,12 @@ import { TasksModule } from './tasks/tasks.module';
 import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports:[
-    MongooseModule.forRoot('mongodb+srv://MarcosSilva:<NKcofxrZieZ6hBFI>@cluster0.0supr7v.mongodb.net/?retryWrites=true&w=majority'),
-
-    TasksModule],
+  imports: [
+    MongooseModule.forRoot(
+      'mongodb+srv://MarcosSilva:<NKcofxrZieZ6hBFI>@cluster0.0supr7v.mongodb.net/?retryWrites=true&w=majority',
+    ),
+    TasksModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
